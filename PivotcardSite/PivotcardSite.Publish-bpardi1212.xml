@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="\\PARDISERV2\pivotcard" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="App_Data/tblUsers.xml" publishTime="12/23/2011 07:34:19" />
+    <file relUrl="home.aspx" publishTime="12/10/2011 23:44:30" />
+    <file relUrl="images/computer_sm.png" publishTime="12/16/2011 20:51:57" />
+    <file relUrl="pivotcard-about.aspx" publishTime="12/21/2011 09:56:38" />
+    <file relUrl="images/collage_2.png" publishTime="11/21/2011 21:56:50" />
+    <file relUrl="Global.asax" publishTime="12/07/2011 19:29:47" />
+    <file relUrl="images/use_pivotcard.png" publishTime="12/21/2011 09:49:29" />
+    <file relUrl="stylesheets/images/ui-bg_highlight-soft_75_ffffff_1x100.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="images/phone_sm.png" publishTime="12/16/2011 19:36:35" />
+    <file relUrl="stylesheets/pivotstylemain.css" publishTime="12/20/2011 21:50:46" />
+    <file relUrl="PCM.Master" publishTime="12/22/2011 00:21:39" />
+    <file relUrl="bin/favicon.ico" publishTime="12/21/2011 22:39:03" />
+    <file relUrl="scripts/my-pivots.js" publishTime="12/19/2011 00:32:48" />
+    <file relUrl="stylesheets/images/ui-icons_cd0a0a_256x240.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="scripts/featuredcontentglider.js" publishTime="11/29/2011 23:51:37" />
+    <file relUrl="stylesheets/images/ui-bg_flat_0_aaaaaa_40x100.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="scripts/headerfooter.js" publishTime="12/22/2011 00:55:38" />
+    <file relUrl="DataService.svc" publishTime="11/28/2011 00:44:29" />
+    <file relUrl="error.aspx" publishTime="12/22/2011 15:32:38" />
+    <file relUrl="images/logo_color.png" publishTime="12/16/2011 21:00:04" />
+    <file relUrl="servicetest.aspx" publishTime="12/19/2011 00:32:48" />
+    <file relUrl="stylesheets/images/ui-icons_454545_256x240.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="pivot/PageRedir.aspx" publishTime="12/21/2011 13:29:44" />
+    <file relUrl="scripts/jquery-ui-1.8.16.custom.min.js" publishTime="12/14/2011 17:06:37" />
+    <file relUrl="scripts/jcookies.js" publishTime="11/29/2011 23:56:24" />
+    <file relUrl="stylesheets/jquery-ui-1.8.16.custom.css" publishTime="12/14/2011 17:41:03" />
+    <file relUrl="images/logo_90x30.png" publishTime="11/28/2011 16:00:36" />
+    <file relUrl="stylesheets/images/ui-bg_glass_75_e6e6e6_1x400.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="bin/PivotcardSite.dll" publishTime="12/23/2011 07:33:37" />
+    <file relUrl="images/logo_grey.png" publishTime="11/17/2011 19:13:17" />
+    <file relUrl="stylesheets/images/ui-bg_glass_65_ffffff_1x400.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="stylesheets/images/ui-icons_888888_256x240.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="terms.aspx" publishTime="12/22/2011 13:26:35" />
+    <file relUrl="cards-and-apps.aspx" publishTime="12/17/2011 10:01:10" />
+    <file relUrl="stylesheets/images/ui-bg_glass_55_fbf9ee_1x400.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="images/devices.png" publishTime="11/21/2011 21:56:50" />
+    <file relUrl="scripts/jquery.validate.min.js" publishTime="12/11/2011 09:48:48" />
+    <file relUrl="stylesheets/featuredcontentglider.css" publishTime="12/10/2011 23:56:57" />
+    <file relUrl="images/home_hero.png" publishTime="11/17/2011 19:13:17" />
+    <file relUrl="stylesheets/images/ui-bg_flat_75_ffffff_40x100.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="images/steps.png" publishTime="11/21/2011 21:56:50" />
+    <file relUrl="pctest.htm" publishTime="12/12/2011 22:46:01" />
+    <file relUrl="App_Code/XmlMembershipProvider.cs" publishTime="11/30/2011 10:52:35" />
+    <file relUrl="pivotcard-social.aspx" publishTime="12/22/2011 08:31:01" />
+    <file relUrl="stylesheets/images/ui-icons_ffffff_256x240.png" publishTime="12/14/2011 17:39:47" />
+    <file relUrl="stylesheets/images/ui-icons_2e83ff_256x240.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="privacy.aspx" publishTime="12/21/2011 10:08:27" />
+    <file relUrl="images/card_sm.png" publishTime="12/16/2011 19:36:35" />
+    <file relUrl="learn-about-pivotcard.aspx" publishTime="12/20/2011 21:51:48" />
+    <file relUrl="scripts/jquery-1.7.1.min.js" publishTime="12/03/2011 15:13:15" />
+    <file relUrl="Web.config" publishTime="12/22/2011 00:57:35" />
+    <file relUrl="stylesheets/images/ui-bg_glass_75_dadada_1x400.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="my-pivots.aspx" publishTime="12/18/2011 10:40:11" />
+    <file relUrl="stylesheets/images/ui-icons_222222_256x240.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="bin/PivotcardSite.pdb" publishTime="12/23/2011 07:33:37" />
+    <file relUrl="images/logos.png" publishTime="11/21/2011 21:56:50" />
+    <file relUrl="favicon.ico" publishTime="12/21/2011 22:39:03" />
+    <file relUrl="pivotcard-support.aspx" publishTime="12/21/2011 09:50:06" />
+    <file relUrl="scripts/pivotcard-signin.js" publishTime="12/22/2011 15:18:49" />
+    <file relUrl="stylesheets/images/ui-bg_inset-soft_95_fef1ec_1x100.png" publishTime="12/14/2011 17:07:04" />
+    <file relUrl="scripts/pivotscripts.js" publishTime="12/23/2011 07:32:04" />
+    <file relUrl="pivotcard-signin.aspx" publishTime="12/18/2011 15:01:01" />
+  </publishProfile>
+</publishData>

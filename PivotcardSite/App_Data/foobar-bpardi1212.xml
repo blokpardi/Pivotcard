@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pivots>
+  <Pivot>
+    <PivotCode>fee</PivotCode>
+    <PivotId>6506</PivotId>
+    <PivotContent><![CDATA[http://www.fee.com]]></PivotContent>
+    <PivotType>pl</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>ht</PivotCode>
+    <PivotId>3728</PivotId>
+    <PivotContent><![CDATA[<bold>hi</bold>]]></PivotContent>
+    <PivotType>pp</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>jojo</PivotCode>
+    <PivotId>1737</PivotId>
+    <PivotContent><![CDATA[http://www.jojo.com/jo]]></PivotContent>
+    <PivotType>pl</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>ht</PivotCode>
+    <PivotId>3296</PivotId>
+    <PivotContent><![CDATA[<bold>hi</bold>]]></PivotContent>
+    <PivotType>pp</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+</Pivots>

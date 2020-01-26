@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotCardService", "PivotCardService\PivotCardService.csproj", "{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHarness", "..\TestHarness\TestHarness\TestHarness.csproj", "{5E9A9938-1BBA-4614-A473-6E2F179A069F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotCardAdmin", "..\PivotCardAdmin\PivotCardAdmin\PivotCardAdmin.csproj", "{68E17996-CEB1-4D39-A79C-D9521A927014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PivotCardGen", "..\PivotCardGen\PivotCardGen.csproj", "{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://studio01:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\PivotCardAdmin\\PivotCardAdmin\\PivotCardAdmin.csproj
+		SccProjectName1 = ../PivotCardAdmin/PivotCardAdmin
+		SccLocalPath1 = ..\\PivotCardAdmin\\PivotCardAdmin
+		SccProjectUniqueName2 = ..\\PivotCardGen\\PivotCardGen.csproj
+		SccProjectName2 = ../PivotCardGen
+		SccLocalPath2 = ..\\PivotCardGen
+		SccProjectUniqueName3 = PivotCardService\\PivotCardService.csproj
+		SccProjectName3 = PivotCardService
+		SccLocalPath3 = PivotCardService
+		SccProjectUniqueName4 = ..\\TestHarness\\TestHarness\\TestHarness.csproj
+		SccProjectName4 = ../TestHarness/TestHarness
+		SccLocalPath4 = ..\\TestHarness\\TestHarness
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		PivotcardGen|Any CPU = PivotcardGen|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}.PivotcardGen|Any CPU.ActiveCfg = PivotcardGen|Any CPU
+		{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74CB7F39-6E47-471C-B2E1-69BEB33CBED4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9A9938-1BBA-4614-A473-6E2F179A069F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9A9938-1BBA-4614-A473-6E2F179A069F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9A9938-1BBA-4614-A473-6E2F179A069F}.PivotcardGen|Any CPU.ActiveCfg = PivotcardGen|Any CPU
+		{5E9A9938-1BBA-4614-A473-6E2F179A069F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9A9938-1BBA-4614-A473-6E2F179A069F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68E17996-CEB1-4D39-A79C-D9521A927014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68E17996-CEB1-4D39-A79C-D9521A927014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68E17996-CEB1-4D39-A79C-D9521A927014}.PivotcardGen|Any CPU.ActiveCfg = PivotcardGen|Any CPU
+		{68E17996-CEB1-4D39-A79C-D9521A927014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68E17996-CEB1-4D39-A79C-D9521A927014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.PivotcardGen|Any CPU.ActiveCfg = PivotcardGen|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.PivotcardGen|Any CPU.Build.0 = PivotcardGen|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9F72942-8DE6-4C13-B0A7-FE3F88F78BF4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

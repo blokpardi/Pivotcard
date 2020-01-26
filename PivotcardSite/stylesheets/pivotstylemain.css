@@ -1,0 +1,690 @@
+﻿@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/segoeui.eot');
+  src: local('Segoe UI'), local('Segoe UI'), url('/fonts/segoeui.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Light';
+  src: url('fonts/segoeuil.eot');
+  src: local('Segoe UI Light'), local('Segoe UI Light'), url('/fonts/segoeuil.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Semibold';
+  src: url('/fonts/seguisb.eot');
+  src: local('Segoe UI Semibold'), local('Segoe UI Semibold'), url('fonts/seguisb.ttf') format('truetype');
+}
+body
+{
+	margin: auto;
+	height:100%;
+	cursor:default;
+	max-width: 1000px;
+	min-width: 1000px;
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+}
+#janrainEngage
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	text-align:center;
+	width:400px;
+	float:left;
+	margin:20px;
+}
+#janrainEngageEmbed
+{
+	width:392px;
+	/*margin:auto;*/	
+}
+.janrainHeaderDiv
+{
+	padding-left: 1px !important;
+	font-family: 'Segoe UI Light', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+}
+
+.janrainContentBox
+{
+	width: 380px !important;
+	height: 156px !important; 
+	overflow: hidden !important; 
+	padding-right: 5px !important; 
+	padding-left: 5px !important; 
+	position: relative !important; 
+	box-sizing: content-box !important; 
+	background-color: rgb(255, 255, 255) !important;
+}
+
+#loginBox
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	width:370px;
+	float:left;
+	margin:20px;
+}
+
+#loginBox .label
+{
+	margin-right:10px;
+}
+
+#loginBox #pNameEdit, #uNameEdit, #pwEdit
+{ 
+	text-align:right;
+	float:right;
+	height:43px;
+}
+
+#loginBox #pNameInput, #uNameInput, #pwInput
+{
+	margin-right:5px;
+}
+
+#header, #footer, #mainbody
+{
+	margin:auto;
+	width:890px;
+}
+#footer
+{
+	color:#838C93;
+	font-size:10pt;
+}
+#acctButton
+{
+	font-size:12pt;
+	color:#ffffff;
+	background-color:#838C93;
+	width:100px;
+	height:32px;
+	text-align:center;
+	padding-top:5px;
+	float:right;
+	cursor:pointer;
+}
+#acctButton:Hover
+{
+	color:#C9CCCE;
+}
+
+#acctButton:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+#navBar, #footerBar
+{
+	width:100%;
+	margin-top:10px;
+	margin-bottom:10px;
+	float:left;
+}
+#footerBar
+{
+	margin-top:25px;
+}
+#navLogo
+{
+	float: left;
+	width:144px;
+}
+#navButtons
+{
+	float:right;
+	height:53px;
+	margin-top:20px;
+	vertical-align:middle;
+	width:auto;
+}
+
+
+.hlinkTopNav, .hlinkBotNav
+{
+	color:#838C93;
+	text-decoration:none;
+	margin-left:20px;
+	float:left;
+}
+.hlinkTopNav:Hover, .hlinkBotNav:Hover
+{
+	color:#000000;
+}
+
+.hlinkTopNav:before, .hlinkBotNav:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+#herobox
+{
+	height:416px;
+	width:890px;
+	float:left;
+	border:1px solid #000000;	
+}
+#heroboxNarrow
+{
+	min-height:210px;
+	height:auto;
+	width:890px;
+	float:left;
+	border:1px solid #000000;	
+}
+#heroboxAd
+{
+	min-height:210px;
+	height:auto;
+	width:715px;
+	float:left;
+	border:1px solid #000000;	
+}
+.titletext
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	font-size:24pt;
+	color:#000000;
+	text-align:left;
+	float:left;
+}
+#herocta
+{
+	float:left;
+	width:445px;
+	height:507px;
+	vertical-align:middle;
+}
+.heroctaNarrow
+{
+	float:left;
+	width:435px;
+	height:150px;
+	vertical-align:middle;
+}
+.herotext
+{
+	margin-left:90px;
+	margin-top:110px;
+	width:380px;
+	height:auto;
+	float:inherit;
+}
+#heroimage
+{
+	float:right;
+}
+#startbutton
+{
+	border-style: none;
+	color: #FFFFFF;
+	font-size: 16pt;
+	background-color: #3C85CC;
+	width: 175px;
+	height: 34px;
+	float: left;
+	text-align: center;
+	margin-left:125px;
+	margin-top:50px;
+	cursor:pointer;
+}
+.greyfield
+{
+	border-style: none;
+	color: #FFFFFF;
+	font-size: 22pt;
+	background-color: #9DA6AE;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+}
+.bluefield
+{
+	border-style: none;
+	color: #FFFFFF;
+	font-size: 22pt;
+	background-color: #3C85CC;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#PCButton
+{
+	list-style: none !important; 
+	border-radius: 5px !important; 
+	border: 1px solid rgb(204, 204, 204) !important; 
+	width: 185px !important; height: 30px !important; 
+	text-align: center !important; 
+	margin-top: 0px !important; 
+	margin-right: 5px !important; 
+	margin-bottom: 5px !important; 
+	position: relative !important; 
+	cursor: pointer !important; 
+	background-image: url("https://docj27ko03fnu.cloudfront.net/rel/img/c7a91677d94f4a79e1b26c8ceb31af82.png") !important; 
+	background-color: rgb(227, 227, 227);
+}
+
+#PCButton img
+{
+	background-color: transparent !important;
+	width:90px;
+	height:30px;
+}
+.persist
+{
+	font-size:10pt; 
+	color:#666666; 
+	float:left; 
+	width:auto; 
+	vertical-align:middle; 
+}
+
+
+#noCardContainer
+{
+	margin:80px auto 35px 110px;
+	width:650px;
+	float:left;
+	text-align:center;
+	font-size:18pt;
+	display:none;
+}
+
+#noCardContainer a
+{
+    color:#000000;
+}
+#myTitleContainer
+{
+	margin:0px 30px 35px 30px;
+	width:830px;
+	float:left;
+}
+.myTitleName
+{
+	margin-top:28px;
+	font-size: 16pt;
+	float:left;
+}
+
+.myTitleLink
+{
+	margin-top:32px;
+	font-size:12pt;
+	color:#838C93;
+	float:left;
+}
+
+#myTitleAdd
+{
+	margin-top:30px;
+	font-size:14pt;
+	font-weight:bold;
+	cursor:pointer;
+	color:#838C93;
+	float:right;
+	text-decoration:none;
+}
+
+#myTitleAdd:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+#myCardContainer
+{
+	width:865px;
+	float:left;
+	margin-left:15px;
+	margin-bottom:15px;
+}
+.myCardBox
+{
+	margin:0px 15px 30px 15px;
+	float:left;
+	border:1px solid #3F3F3F;
+	width:254.75px;
+	height:151.71px;
+	background-color:#F3F3F3;
+	box-shadow:3px 3px 5px 1px lightgrey;
+	overflow:hidden;
+
+}
+
+.animbox
+{
+	margin:0px 15px 30px 15px;
+	float:left;
+	border:1px solid #3F3F3F;
+	width:254.75px;
+	height:151.71px;
+	position:absolute;
+	z-index:9950;
+	display:none;
+}
+.cardContent
+{
+	margin:15px 15px 15px 12px;
+	max-width:225px;
+	float:left;
+	height:90px;
+	
+}
+.cardTitle
+{
+	width:225px;
+	margin:auto;
+	text-align:center;
+	margin-bottom:10px;
+	font-size:18pt;
+	float:left;
+}
+.cardLink
+{
+	margin:auto;
+	text-align:center;
+	font-size:11pt;
+	max-height:60px;
+	max-width:225px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	float:left;
+}
+.cardButtons
+{
+	margin:3px 15px 15px 0px;
+	width:255px;
+	height:29px;
+	background-color:#ED885A;
+	float:left;
+	color:#838C93;
+	font-size:11pt;
+}
+.cardButtons div, 
+.cardButtons a
+{
+	margin-left:55px;
+	margin-top:4px;
+	color:#ffffff;
+	float:left;
+	cursor:pointer;
+	text-decoration:none;
+	
+}
+
+.cardButtons div:before, 
+.cardButtons a:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+.cardButtons input
+{
+	margin-left:20px;
+	margin-top:3px;
+	float:left;
+}
+.cardButtons label
+{
+	margin-left:5px;
+	float:left;
+}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:9000;
+  background-color:#000;
+  display:none;
+  opacity: 0.5;
+}
+  
+#editDialog
+{
+	position:absolute;
+	left:0;
+	top:0;
+	width:606px;
+	height:348px;
+	border:1px solid #000000;
+	background-color:#ffffff;
+	display:none;
+	z-index:9999;
+}
+#typeButtons
+{
+	width:100%;
+	font-size:14pt;
+	margin-bottom:30px;
+}
+
+.typeButton
+{
+	width:303px;
+	height:30px;
+	text-align:center;
+	margin:auto;
+	float:left;
+	color:#000000;
+	background-color:#ffffff;
+	cursor:pointer;
+	padding-top:5px;
+}
+
+.typeButton.inactive
+{
+	color:#d6d6d6;
+	background-color:#838C93;
+}
+
+.typePage
+{
+	width:100%;
+	height:260px;
+	text-align:center;
+	margin:auto;
+	float:left;
+	color:#000000;
+	background-color:#ffffff;
+	display:block;
+}
+.editButtons
+{
+	margin:0px auto 15px auto;
+	width:100%;
+	float:left;
+	text-align:center;
+	font-size:12pt;
+	font-weight:bold;
+	color:#000000;
+	cursor:pointer;
+}
+
+.editButtons .save
+{
+	border-style: none;
+	background-color: transparent;
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	font-size:12pt;
+	font-weight:bold;
+	color:#000000;
+	cursor:pointer;
+}
+
+.editButtons div:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+.editButtons .persist:before
+{
+	content: "\0020";
+}
+
+.shortcutInput
+{
+	float:left; margin-bottom:20px; width:100%; font-size:12pt;
+}
+
+.shortcutInput .labelText
+{
+	float:left;
+	margin:0px 10px 5px 60px;
+}
+
+.shortcutInput input
+{
+	float:left;
+}
+.shortcutInput .exampleText
+{
+	float:left;
+	margin-left:10px;
+	font-size:10pt;
+}
+.shortcutInput .errorText
+{
+	float:left;
+	font-size:9pt;
+	color:Red;
+	visibility:visible;
+	width:400px;
+	text-align:left;
+	margin-left:170px;
+	margin-top:-5px;
+}
+
+.errorText
+{
+	float:left;
+	margin-left:10px;
+	font-size:10pt;
+	color:Red;
+	visibility:visible;
+}
+#nscontain
+{
+	background-color:#3C85CC;
+	width:100%;
+	float:left;
+	text-align:center;
+	margin:auto;
+	background-color:#3C85CC;
+	display:none;
+}
+#nextstep
+{
+	width:250px;
+	height:30px;
+	margin:auto;
+	cursor:pointer;
+	
+}
+.basicblack
+{
+	font-size:12pt;
+	float:left;
+	text-align:center;
+	padding-top:10px;
+	height:30px;
+	width:243px;
+}
+.whitebluefield
+{
+	font-size:12pt;
+	float:left;
+	width:auto;
+	height:auto;
+	text-align:center;
+	padding-top:5px;
+	color:#ffffff;
+}
+#contentContainer
+{
+	margin:20px 0px 20px 25px;
+	float:left;
+}
+.promocard
+{
+	width:320px; 
+	float:left; 
+	margin-right:20px; 
+	margin-bottom:20px; 
+	height:200px; 
+	border:1px solid #C9CCCE;
+}
+.promoheader
+{
+	width:313px; 
+	float:left; 
+	padding:4px 0px 0px 7px; 
+	height:26px; 
+	background-color:#3C85CC; 
+	color:#ffffff; 
+	font-size:12pt;
+}
+#pivotPageMain
+{
+	margin:0;
+	float:left;
+	width:100%;
+}
+.supportBullet
+	{
+		font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+		width:700px;
+		float:left;
+	}
+	.blueNumber
+	{
+	width:30px;
+	height:30px;
+	text-align:center;
+	vertical-align:middle;
+	background-color:#3C85CC;
+	color:#ffffff;
+	font-size:14pt;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	float:left;
+	}
+	.supportText
+	{
+		width:620px;
+		font-size:12pt;
+		float:left;
+		margin:0 5px 20px 15px;
+	}
+
+.hovertip
+{
+	position: absolute;
+	display: none;
+	border: 1px solid #3C85CC;
+	background-color: #FFFFCC;
+	width:auto;
+	max-width:210px;
+	padding: 7px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.helpbubble
+{
+	width: 20px;
+	height: 20px;
+	background: #3399FF;
+	color: #ffffff;
+	text-align: center;
+	line-height: 105%;
+	font-weight: bold;
+	vertical-align: middle;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #fffff;
+}

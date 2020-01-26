@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Pivots>
+  <Pivot>
+    <PivotCode>fee</PivotCode>
+    <PivotId>6506</PivotId>
+    <PivotContent><![CDATA[http://www.facebook.com]]></PivotContent>
+    <PivotType>pl</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>ho</PivotCode>
+    <PivotId>3728</PivotId>
+    <PivotContent><![CDATA[http://hoho.com]]></PivotContent>
+    <PivotType>pl</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>jojo</PivotCode>
+    <PivotId>1737</PivotId>
+    <PivotContent><![CDATA[http://www.jojo.com/jo]]></PivotContent>
+    <PivotType>pl</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+  <Pivot>
+    <PivotCode>ht</PivotCode>
+    <PivotId>3296</PivotId>
+    <PivotContent><![CDATA[<div style="width:400px; text-align:left; margin:50px auto auto auto"><img alt="Bill" width="50px" height="50px" src="http:\\a5.sphotos.ak.fbcdn.net\hphotos-ak-ash4\228709_1945909721698_1061163494_2354433_1879172_n.jpg" /></div>]]></PivotContent>
+    <PivotType>pp</PivotType>
+    <PivotDefault>false</PivotDefault>
+  </Pivot>
+</Pivots>

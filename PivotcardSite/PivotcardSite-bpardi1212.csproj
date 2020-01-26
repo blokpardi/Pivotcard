@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FF1085FC-245B-46E6-9F91-A2C09BB1A342}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PivotcardSite</RootNamespace>
+    <AssemblyName>PivotcardSite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cards-and-apps.aspx.cs">
+      <DependentUpon>cards-and-apps.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cards-and-apps.aspx.designer.cs">
+      <DependentUpon>cards-and-apps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pivotcard-support.aspx.cs">
+      <DependentUpon>pivotcard-support.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pivotcard-support.aspx.designer.cs">
+      <DependentUpon>pivotcard-support.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pivotcard-social.aspx.cs">
+      <DependentUpon>pivotcard-social.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pivotcard-social.aspx.designer.cs">
+      <DependentUpon>pivotcard-social.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pivot\PageRedir.aspx.cs">
+      <DependentUpon>PageRedir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pivot\PageRedir.aspx.designer.cs">
+      <DependentUpon>PageRedir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="privacy.aspx.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="privacy.aspx.designer.cs">
+      <DependentUpon>privacy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="terms.aspx.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="terms.aspx.designer.cs">
+      <DependentUpon>terms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserFile.cs" />
+    <Content Include="cards-and-apps.aspx" />
+    <Content Include="error.aspx" />
+    <Content Include="pivotcard-about.aspx" />
+    <Content Include="images\use_pivotcard.png" />
+    <Content Include="pivotcard-support.aspx" />
+    <Content Include="pivotcard-social.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\card_sm.png" />
+    <Content Include="images\computer_sm.png" />
+    <Content Include="images\logo_color.png" />
+    <Content Include="images\phone_sm.png" />
+    <Content Include="my-pivots.aspx" />
+    <Content Include="DataService.svc" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="PivotData.cs" />
+    <Compile Include="my-pivots.aspx.cs">
+      <DependentUpon>my-pivots.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="my-pivots.aspx.designer.cs">
+      <DependentUpon>my-pivots.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginResult.cs" />
+    <Compile Include="UserData.cs" />
+    <Content Include="App_Data\tblUsers.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="images\logo_90x30.png" />
+    <Content Include="learn-about-pivotcard.aspx" />
+    <Content Include="pctest.htm" />
+    <Content Include="pivotcard-signin.aspx" />
+    <Content Include="pivot\PageRedir.aspx" />
+    <Content Include="privacy.aspx" />
+    <Content Include="scripts\featuredcontentglider.js" />
+    <Content Include="scripts\headerfooter.js" />
+    <Content Include="scripts\jcookies.js" />
+    <Content Include="scripts\jquery-1.7.1.min.js" />
+    <Content Include="scripts\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="scripts\jquery.validate.min.js" />
+    <Content Include="scripts\my-pivots.js" />
+    <Content Include="scripts\pivotcard-signin.js" />
+    <Content Include="scripts\pivotscripts.js" />
+    <Content Include="servicetest.aspx" />
+    <Content Include="home.aspx" />
+    <Content Include="images\collage_2.png" />
+    <Content Include="images\devices.png" />
+    <Content Include="images\home_hero.png" />
+    <Content Include="images\logos.png" />
+    <Content Include="images\logo_grey.png" />
+    <Content Include="images\steps.png" />
+    <Content Include="stylesheets\featuredcontentglider.css" />
+    <Content Include="stylesheets\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="stylesheets\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="stylesheets\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="stylesheets\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="stylesheets\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="stylesheets\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="stylesheets\images\ui-bg_highlight-soft_75_ffffff_1x100.png" />
+    <Content Include="stylesheets\images\ui-bg_inset-soft_95_fef1ec_1x100.png" />
+    <Content Include="stylesheets\images\ui-icons_222222_256x240.png" />
+    <Content Include="stylesheets\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="stylesheets\images\ui-icons_454545_256x240.png" />
+    <Content Include="stylesheets\images\ui-icons_888888_256x240.png" />
+    <Content Include="stylesheets\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="stylesheets\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="stylesheets\jquery-ui-1.8.16.custom.css" />
+    <Content Include="stylesheets\pivotstylemain.css" />
+    <Content Include="terms.aspx" />
+    <Content Include="favicon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\XmlMembershipProvider.cs" />
+    <Compile Include="App_Code\csharp-helper-class.cs" />
+    <Compile Include="DataService.svc.cs">
+      <DependentUpon>DataService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="learn-about-pivotcard.aspx.cs">
+      <DependentUpon>learn-about-pivotcard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="learn-about-pivotcard.aspx.designer.cs">
+      <DependentUpon>learn-about-pivotcard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PCM.Master.cs">
+      <DependentUpon>PCM.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PCM.Master.designer.cs">
+      <DependentUpon>PCM.Master</DependentUpon>
+    </Compile>
+    <Compile Include="pivotcard-signin.aspx.cs">
+      <DependentUpon>pivotcard-signin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="pivotcard-signin.aspx.designer.cs">
+      <DependentUpon>pivotcard-signin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="servicetest.aspx.cs">
+      <DependentUpon>servicetest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="servicetest.aspx.designer.cs">
+      <DependentUpon>servicetest.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PCM.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fonts\segoeui.eot" />
+    <None Include="fonts\segoeui.ttf" />
+    <None Include="fonts\segoeuib.eot" />
+    <None Include="fonts\segoeuib.ttf" />
+    <None Include="fonts\segoeuii.eot" />
+    <None Include="fonts\segoeuii.ttf" />
+    <None Include="fonts\segoeuil.eot" />
+    <None Include="fonts\segoeuil.ttf" />
+    <None Include="fonts\segoeuiz.eot" />
+    <None Include="fonts\segoeuiz.ttf" />
+    <None Include="fonts\seguisb.eot" />
+    <None Include="fonts\seguisb.ttf" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59671</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

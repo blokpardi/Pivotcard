@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1; user-scalable=no"/> 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+    <title>Pivotcard</title>
+    
+	  <link rel="stylesheet" href="stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/Pivotcard.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/jquery.mobile.structure-1.0.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/pivotstylemobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="stylesheets/mobilecontentfader.css" />
+      <link rel="stylesheet" type="text/css" href="stylesheets/jquery-ui-1.8.16.custom.css" />
+      
+      <script type="text/javascript" src="scripts/mobilecontentfader.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.validate.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.base64.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery-ui-1.8.16.custom.min.js"></script>
+      <script type="text/javascript" src="scripts/pivotscripts.js"></script>
+      <script type="text/javascript" src="scripts/phonegap-1.3.0.js"></script>
+      <script type="text/javascript" src="scripts/signin.js"></script>
+      <script type="text/javascript" src="scripts/mobile-pivots.js"></script>
+      <!--<script type="text/javascript" src="scripts/jquery.mobile-1.0.min.js"></script>-->
+     
+      <script type="text/javascript" language="javascript">
+          var currPg, prevPg = null, backScript=[];
+
+
+          $(document).ready(function () {
+              document.addEventListener("deviceready", onDeviceReady, false);
+              document.addEventListener("backbutton", onBackKeyDown, false);
+           });
+
+           function onDeviceReady(e) {
+               $.support.cors = true;
+               $.ajaxSetup({
+                   timeout: 10000,
+                   crossDomain: true,
+                   error: function (xhr, ajaxOptions, thrownError) {
+                       stopActivity();
+                       pgalert(thrownError['message']);
+                       pgalert(checkConnection());
+                   }
+               });
+               stopActivity();
+               currPg = "#interim";
+               
+               if (getCookie('login') != null) {
+                   userName = getUserName();
+                   pcToken = getToken();
+                   startActivity();
+                   $.ajax({
+                       type: "GET",
+                       url: baseUrl + 'DataService.svc/checkToken/' + PivotEncode(userName) + '/' + pcToken,
+                       dataType: "jsonp",
+                       success: function (R) {
+                           stopActivity();
+                           pageNav('#mypivots');
+                           setupMyPivots();
+                       }
+                   });
+               }
+               else {
+                   if (getCookie('login') != null) {
+                       $("#createButtons").hide();
+                       $("#pivotsButton").show();
+                   }
+                   else {
+                       $("#pivotsButton").hide();
+                       $("#createButtons").show();
+                   }
+                   pageNav('#home');
+               }
+              
+           }
+
+			function checkConnection() {
+			    var networkState = navigator.network.connection.type;
+			    var states = {}; 
+                states[Connection.UNKNOWN] = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI] = 'WiFi connection';
+                states[Connection.CELL_2G] = 'Cell 2G connection';
+                states[Connection.CELL_3G] = 'Cell 3G connection';
+                states[Connection.CELL_4G] = 'Cell 4G connection';
+                states[Connection.NONE] = 'No network connection';
+                // navigator.notification.alert('Connection type: ' + networkState);
+                return networkState;
+            }
+
+            function onBackKeyDown() {
+                if (backScript != '') {
+                    var fn = backScript.pop();
+                    eval(fn);
+                }
+                else {
+                    navigator.app.backHistory()
+                }
+            }
+
+            function fwdNav(page) {
+                backScript.push('pageNav("' + currPg + '")')
+                pageNav(page);
+            }
+
+            function pageNav(page) {
+                if (currPg != page) {
+                    $(currPg).animate({ 'margin-left': '-480' }, 300, function () {
+                        $(this).hide();
+                    });
+                    $(page).show().animate({ 'margin-left': '0' }, 300);
+                    prevPg = currPg;
+                    currPg = page;
+                }
+			}
+
+			function initHome() {
+			    if (getCookie('login') != null) {
+			        $("#createButtons").hide();
+                     $("#pivotsButton").show();
+			    }
+			    else {
+			        $("#pivotsButton").hide();
+			        $("#createButtons").show();
+			    }
+			    fwdNav('#home');
+            }
+
+			function initLearn() {
+			    initSlider();
+			    fwdNav('#learn');
+			}
+
+			function initSignin() {
+//			    var scriptPath = window.location.protocol + "app\\www/scripts/signin.js";
+//			    $.getScript(scriptPath);
+			    fwdNav('#signin');
+			    signinInit();
+			}
+
+			function initSignup() {
+			    fwdNav('#signin');
+			    signupInit();
+			}
+
+			function initMyPivots() {
+			    fwdNav('#mypivots');
+			    setupMyPivots();
+			}
+
+			$.receiveMessage(function (e) {
+			    fwdNav('#signedin');
+			},'http://localhost:59671');
+
+			function getframeloc() {
+			    var f = document.getElementById("signinframe").innerHTML;
+
+			    $("#checkframeloc").html(f);
+			}
+
+    </script>
+  </head>
+<body style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+<div type="header" style="width:320px; margin-bottom:10px; height:45px; background-color:#3F3F3F;">
+	<img id="navLogo" onclick="initHome()" style="border:0" src="images/mobile_logo_white.png" alt="Pivotcard logo"/> 
+</div>
+
+<div type="page" style="min-height:422px;" id="interim">
+&nbsp;
+</div>
+
+<div type="page" style="display:none; min-height:422px;" id="home">
+    <div id="bodyContent">
+    <div id="heroimg" style="width:100%; text-align:center;float:left;auto;margin-bottom:5px;"><img src="images/mobile_home_hero.png"/></div>
+    <div id="createButtons" style="display:none">
+        <div style="width: 100%; text-align:center; margin: 10px 0 10px 0;"> <input onclick="initSignup()"; type="button" class="blueButton" style="width:180px" value="Create an Account" /></div>
+        <div style="width: 100%; text-align:center; margin: 10px 0 10px 0;"><input onclick="initSignin()"; type="button" class="blueButton" style="width:180px" value="Sign in" /></div>
+        <div style="border: 1 solid #000000; width: 150px; margin: 20px auto 5px auto;">&nbsp;<a href="#" onclick="initLearn()">Learn more...</a></div>
+    </div>
+    <div id="pivotsButton">
+        <div style="width: 100%; float:left; margin-top:50px; text-align:center; margin: 10px 0 10px 0;"> <input onclick="initMyPivots()"; type="button" class="blueButton" style="width:180px" value="Show my Pivots" /></div>
+    </div>
+    </div>
+</div>
+
+<div type="page" style="display:none; min-height:422px;" id="learn">
+    <div id="learnContent">
+        <div id="gliderbox" class="glidecontentwrapper" style="text-align:center; width:100%;">
+            <div class="glidecontent" >
+                <img alt="" src="images/learn_mobile_p1.jpg" />
+            </div>
+            <div class="glidecontent" >
+                <img alt="" src="images/learn_mobile_p2.jpg" />
+            </div>
+            <div class="glidecontent" >
+             <img alt="" src="images/learn_mobile_p3.jpg" />
+            </div>
+        <div id="p-select" class="glidecontenttoggler">
+        <a href="#" class="toc">&nbsp;</a> <a href="#" class="toc">&nbsp;</a> <a href="#" class="toc">&nbsp;</a>
+        </div>
+        </div>
+    </div>
+</div>
+
+<div type="page" style="display:none; min-height:422px;" id="signin">
+    <form action="#" id="loginBox">
+        <span style="float:left; text-align:center; width:300px; font-size:16pt; margin-bottom:15px">Welcome to Pivotcard!</span>
+        <div id="pNameEdit">
+            <span class="label">Pivotname</span><br />
+            <input type="text" id="pNameInput" name="pNameInput" class="signinValidate" style="width:250px;height:20px"/><span htext="This should be a unique name you use to identify yourself. It will be part of your Pivotcard address as in pivotcard.com/YOURNAME" class="helpbubble" style="float:right;">?</span><br />
+            <div id="pNameError" class="errorText" >&nbsp;</div>
+        </div>
+        <div id="uNameEdit">
+            <span class="label" >User name</span><br />
+            <input type="text" id="uNameInput" name="uNameInput" class="signinValidate" style="width:250px;height:20px"/><span htext="User name must be a valid email address. It's just used for login, we will never share it with anyone without your permission." class="helpbubble" style="float:right;">?</span><br />
+            <div id="uNameError" class="errorText" >&nbsp;</div>
+        </div>
+        <div id="pwEdit">
+            <span class="label" >Password</span><br />
+            <input type="password" id="pwInput" name="pwInput" class="signinValidate" style="width:250px;height:20px"/><span htext="No spaces in your password, please!" class="helpbubble" style="float:right;">?</span><br />
+            <div id="pwError" class="errorText">&nbsp;</div>
+        </div>
+        <div class="editButtons">
+            <!--<div class="persist" style="font-weight:normal; margin:0px 10px 0px 10px"><input id='ckPersist' onclick='changePers(this.checked)' type='checkbox'>stay logged in</input></div>-->
+            <input onclick="continueSignin();" type="button" class="blueButton" style="height:35px; font-size:14pt; float:left; margin-top:10px; margin-left:90px; width:120px" value="Continue" />
+        </div>
+        
+    </form>
+    <div style="float:left;color:#000000; margin-top:10px;margin-left:20px">
+        <div id="signupText" class="titletext" style="font-size:12pt">Create a new Pivotcard login using a unique Pivotname and an email. Easy.</div>
+        <div id="signinText" class="titletext" style="font-size:12pt; display:none">Sign-in to using your Pivotcard account.</div>
+    </div>
+</div>
+
+<div type="page" style="display:none; min-height:422px;" id="mypivots">
+    <div id="heroboxNarrow">
+        <div id="noCardContainer">You haven't created any Pivots yet. Let's get <a href="#" name="modal" id="createCard">started</a>!</div>
+        <div id="cardContainer" style="float:left; display:none">
+            <div id="myTitleContainer">
+                <div class="myTitleLink">My link: http://pivotcard.com/ </div><div class="myTitleLink" id="myTitleLink">/</div>
+                <div style="float:left;width:100%;margin:15px auto auto auto; text-align:center"><input id="btnAddPivot" class="blueButton" style="text-align:center;width:110px;height:30px" value="Add Pivot" /></div>
+                <!--<a href="#" name="modal" id="myTitleAdd">Add new Pivot</a>-->
+            </div>
+            <div id="myCardContainer">
+   
+            </div>
+            
+        </div>
+    </div>
+
+    <form action="#" id="editDialog" onclick="return false">
+    <div id="typeButtons"><div class="typeButton" id="shortcut">Shortcut</div><div class="typeButton" id="pivotpage">Pivotpage</div></div>
+
+    <div id="shortcutPage" class="typePage">
+    
+        <div style="float:left; margin: 30px auto 20px auto; width:100%; font-size:10pt; text-align:center;">Create a shortcut to any web address.</div>
+         <div class="shortcutInput" >   
+            <span class="labelText">Shortcut</span><br />
+            <input type="text" id="pivotCodeInput" name="pivotCodeInput" maxlength="10" class="pcValidate" style="margin:0 0 15px 10px;float:left; width:230px;height:20px"/>
+            <span htext="This should be a shortcut that is easy for you to remember. For example, FB or # or 123" class="helpbubble" style="line-height:180%;margin-left:4px;float:left;">?</span>
+            <div id="pcInputError" class="errorText"></div>
+            <br /><br />
+            <span name="urlBox" class="labelText">Web Address</span><br />
+            <input type="text" id="pivotUrlInput" name="pivotUrlInput" class="pcValidate" style="margin:0 0 15px 10px;width:230px;height:20px"/>
+            <span htext="This should be the web address you want the shortcut to link to, such as http://twitter.com/name" class="helpbubble" style="line-height:180%;margin-left:4px;float:left;">?</span>
+            <div id="puInputError" class="errorText"></div>
+            <br /><br />
+            <div style="float:left; padding-left:10px; width:260px; margin-top:15px; margin-bottom:15px; font-size:10pt; color:#434343;"><div style="float:left">This Pivot is: http://pivotcard.com/ </div><div id="pivotEditLink" style="float:left;"></div></div>
+            <div style="float:left; width:100%; margin-bottom:17px"><input id="pivotDefaultInput" style="margin-left:10px;float:left" type='checkbox'/><span style="float:left;font-size:10pt; margin-left:10px; font-weight:normal">Set as default</span></div>
+            <div class="editButtons"><div class="save">Save</div><div class="cancel">Cancel</div></div>
+
+         </div>
+    </div>
+
+    <div id="pivotPagePage" class="typePage">
+        <div style="float:left; margin: 20px auto 15px auto; width:100%; font-size:10pt; text-align:center;">Add HTML to create your own page on Pivotcard</div>
+        <div class="shortcutInput">
+            <span class="labelText">Shortcut</span><br />
+            <input id="pivotPageCodeInput" name="pivotPageCodeInput"  type="text" maxlength="10" class="ppValidate" style="float:left; margin:0 0 15px 10px; width:230px;height:20px"/>
+            <span htext="This should be a shortcut that is easy for you to remember. For example, FB or # or 123" class="helpbubble" style="line-height:180%;margin-left:4px;float:left;">?</span>
+            <div id="ppcInputError" class="errorText"></div>
+            <br /><br />
+            <span class="labelText" style="font-size:10pt; margin-right:50px">HTML</span>
+            <textarea id="pivotPageHTMLInput" name="pivotPageHTMLInput" cols="0" rows="0" class="ppValidate" style="float:left;margin-left:10px; width:270px; height:75px"></textarea>
+           
+            <div id="pphInputError" class="errorText" style="margin:0 0 5px 10px;">&nbsp;</div>
+            <div style="float:left; width:100%; margin-bottom:10px "><input id="ppDefaultInput" style="margin-left:10px;float:left" type='checkbox'/><span style="float:left;font-size:10pt; margin-left:10px; font-weight:normal">Set as default</span></div>
+            <div class="editButtons"><div class="save">Save</div><div class="cancel">Cancel</div></div>
+         </div>
+
+    </div>
+    <input type="text" id="pivotIdInput" style="float:left; width:0px; visibility:hidden"/>
+    </form>
+
+    <!--Delete confirmation box-->
+    <div id="dialog-confirm" style="display:none" title="Are you sure?">
+	    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:5px 7px 20px 0;"></span>Delete this Pivot?</p>
+    </div>
+
+</div>
+
+<div type="page" style="display:none; min-height:422px;" id="nonet">
+    <div style="width:100%;float:left; text-align:center; height:100%"><img style="width:100%; height:100%;" src="images/SplashScreenImage.jpg"/><div style="position:absolute; z-index:20; width:250px; text-align:justify; left:30px; top:250px">It appears you do not have an active internet connection. Please check your Cell or WiFi connection and try again.</div></div>
+</div>
+
+<div type="footer" id="footer">
+    <div id="footercontent"></div>
+</div>
+
+ <div id="mask"></div>
+
+<!--Alert box-->
+<div id="alertbox" style="display:none" title="Message">
+   <p><span class="ui-icon ui-icon-info" style="float:left; margin:5px 7px 20px 0;"></span><span id="alertboxtext"></span></p>
+</div>
+
+<div id="tipmask" class="hovertip"></div>
+<div id="tiptext" class="hovertip"></div>
+</body>
+</html>

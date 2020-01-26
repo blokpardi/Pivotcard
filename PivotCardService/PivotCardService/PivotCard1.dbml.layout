@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="PivotCard1">
+  <DataContextMoniker Name="/PivotCard1DataContext" />
+  <nestedChildShapes>
+    <classShape Id="7722a10b-812d-4d71-a46b-ad61e51a895f" absoluteBounds="0.5, 1.25, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PivotCard1DataContext/Pivot" />
+      <nestedChildShapes>
+        <elementListCompartment Id="146ab0ad-5b06-4dac-9ef0-5f9d079b7be2" absoluteBounds="0.51500000000000012, 1.71, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c46828d4-0607-4c91-856f-d72cf72b4bc1" absoluteBounds="4.75, 1.125, 2, 3.1170068359375">
+      <DataClassMoniker Name="/PivotCard1DataContext/Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="802e48cb-5df3-4dc6-a0ff-8273472bf53b" absoluteBounds="4.765, 1.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.75 : 2.32774983723958); (2.5 : 2.32774983723958)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PivotCard1DataContext/Users/Users_Pivot" />
+      <nodes>
+        <classShapeMoniker Id="c46828d4-0607-4c91-856f-d72cf72b4bc1" />
+        <classShapeMoniker Id="7722a10b-812d-4d71-a46b-ad61e51a895f" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,30 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PCM.master.cs" Inherits="PivotcardSite.PCM" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js" type="text/javascript" language="javascript"></script>
+    <script type="text/javascript" src="scripts/featuredcontentglider.js"></script>
+    <script type="text/javascript" src="scripts/pivotscripts.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheets/featuredcontentglider.css" />
+    <link rel="stylesheet" href="stylesheets/pivotstylemain.css" type="text/css" />
+    <title></title>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="header">
+        <div id="acctButton">Pivotcard Account ></div>
+        <div id="navBar"><div id="navLogo"><img src="images/logo_grey.png" alt="Pivotcard logo"/></div><div id="navButtons"><a href="" class="hlinkTopNav">Get Started</a><a href="" class="hlinkTopNav">About Us</a><a href="" class="hlinkTopNav">Support</a><a href="" class="hlinkTopNav">Cards and Apps</a></div></div>
+    </div>
+    <div id="mainbody">
+        <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        <div id="footerBar"><span>© Copyright 2012 Pivotcard, LLC</span><a href="" class="hlinkBotNav">Press</a><a href="" class="hlinkBotNav">Terms</a><a href="" class="hlinkBotNav">Privacy</a></div>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User>
+    <UserName>billdad</UserName>
+    <Password></Password>
+    <FirstName></FirstName>
+    <LastName></LastName>
+    <Email></Email>
+    <IsActive></IsActive>
+    <Pivots>
+      <Pivot>
+        <PivotCode></PivotCode>
+        <PivotName></PivotName>
+        <PivotUrl></PivotUrl>
+        <PivotType></PivotType>
+      </Pivot>
+    </Pivots>
+    <Cards>
+      <Card>
+        <CardName></CardName>
+        <PivotId></PivotId>
+        <CardType></CardType>
+        <CardData></CardData>
+      </Card>
+    </Cards>
+  </User>
+  <User>
+    <UserName>jodad</UserName>
+    <Password>foo</Password>
+    <FirstName>Joe</FirstName>
+  </User>
+</Users>

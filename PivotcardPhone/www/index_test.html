@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320; user-scalable=no" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <title>PhoneGap</title>
+	  <link rel="stylesheet" href="stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      
+	<script type="text/javascript">
+	    var isready = "not ready";
+		// provide our own console if it does not exist, huge dev aid!
+		if(typeof window.console == "undefined")
+		{
+		window.console = {log:function(str){window.external.Notify(str);}};
+		}
+		
+		// output any errors to console log, created above.
+		window.onerror=function(e)
+		{
+			console.log("window.onerror ::" + JSON.stringify(e));
+		};
+
+        console.log("Installed console ! ");
+       
+        if (typeof window.janrain !== 'object') window.janrain = {};
+        window.janrain.settings = {};
+
+        //janrain.settings.tokenUrl = 'janraintest.aspx';
+        janrain.settings.tokenAction = 'event';
+
+        function isReady() { janrain.ready = true; };
+        if (document.addEventListener) {
+            document.addEventListener("DOMContentLoaded", isReady, false);
+        } else {
+            window.attachEvent('onload', isReady);
+        }
+
+        var e = document.createElement('script');
+        e.type = 'text/javascript';
+        e.id = 'janrainAuthWidget';
+
+        if (document.location.protocol === 'https:') {
+            e.src = 'https://rpxnow.com/js/lib/pivotcard/engage.js';
+        } else {
+            e.src = 'http://widget-cdn.rpxnow.com/js/lib/pivotcard/engage.js';
+        }
+
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(e, s);
+
+       isready = "ready";
+
+    </script>
+      
+      <script type="text/javascript" charset="utf-8" src="scripts/phonegap-1.3.0.js"></script>  
+       
+      <script type="text/javascript">
+
+			function init()
+			{
+				document.addEventListener("deviceready",onDeviceReady,false);
+				document.addEventListener("backbutton",onBackButton,false);
+			}
+			
+			function onBackButton()
+			{
+				console.log("onBackButton");	
+			}
+			
+			function onDeviceReady(e)
+			{
+			    updateDeviceInfo();
+			    isReady();
+			    //initJanRain();
+				//navigator.notification.alert("deviceready event fired!");
+			}
+
+			function initJanRain() {
+			    if (typeof window.janrain !== 'object') window.janrain = {};
+			    window.janrain.settings = {};
+
+			    janrain.settings.tokenUrl = 'janraintest.aspx';
+			    janrain.settings.tokenAction = 'event';
+
+			    function isReady() { janrain.ready = true; };
+			    if (document.addEventListener) {
+			        document.addEventListener("DOMContentLoaded", isReady, false);
+			    } else {
+			        window.attachEvent('onload', isReady);
+			    }
+
+			    var e = document.createElement('script');
+			    e.type = 'text/javascript';
+			    e.id = 'janrainAuthWidget';
+
+			    if (document.location.protocol === 'https:') {
+			        e.src = 'https://rpxnow.com/js/lib/pivotcard/engage.js';
+			    } else {
+			        e.src = 'http://widget-cdn.rpxnow.com/js/lib/pivotcard/engage.js';
+			    }
+
+			    var s = document.getElementsByTagName('script')[0];
+			    s.parentNode.insertBefore(e, s);
+
+			   document.getElementById("platform").innerHTML = "here";
+            }
+            
+            function updateDeviceInfo() 
+			{
+			    document.getElementById("platform").innerHTML = isready;// device.platform;
+				document.getElementById("version").innerHTML = device.version;
+				document.getElementById("uuid").innerHTML = device.uuid;
+				document.getElementById("name").innerHTML = device.name;
+				document.getElementById("width").innerHTML = screen.width;
+				document.getElementById("height").innerHTML = screen.height;
+				document.getElementById("colorDepth").innerHTML = screen.colorDepth;
+			};
+			
+			PhoneGap.addConstructor(function()
+			{
+				console.log("PhoneGap.addConstructor is working");
+			});
+			
+	  </script>
+      
+	 
+	  
+
+  </head>
+  <body onload="init();" id="stage" class="theme">
+    <h1>PhoneGap Tests</h1>
+    <div id="info">
+        <h4>Platform: <span id="platform"> &nbsp;</span></h4>
+        <h4>Version: <span id="version">&nbsp;</span></h4>
+        <h4>UUID: <span id="uuid"> &nbsp;</span></h4>
+        <h4>Name: <span id="name">&nbsp;</span></h4>
+        <h4>Width: <span id="width"> &nbsp;</span>,   Height: <span id="height">&nbsp;
+                   </span>, Color Depth: <span id="colorDepth"></span></h4>
+     </div>
+     
+    <div id="janrainEngage">
+        <div id="janrainEngageEmbed"></div>
+    </div>
+  </body>
+</html>

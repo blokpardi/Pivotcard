@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Users>
+  <User>
+    <UserName>mylo</UserName>
+    <PivotName>mylo</PivotName>
+    <Password></Password>
+    <FirstName></FirstName>
+    <LastName></LastName>
+    <Email></Email>
+    <LastLoginTime>2011-11-28 02:15:07</LastLoginTime>
+    <IsActive></IsActive>
+  </User>
+  <User>
+    <UserName>https://www.google.com/profiles/103196419386017633518</UserName>
+    <Password>zncGZ+X5sNj1U2e7eUGWidkMSEUbsz8Hnzqacq4TLeg=</Password>
+    <Email></Email>
+    <LastLoginTime>2011-12-20 14:19:05</LastLoginTime>
+    <PivotName>foobar</PivotName>
+  </User>
+  <User>
+    <UserName>http://www.facebook.com/profile.php?id=1061163494</UserName>
+    <Password>1B9bSXfuBca2GztfBUeEYo9c0cvgaoKlSE0ebebu/oU=</Password>
+    <Email></Email>
+    <LastLoginTime>2011-12-23 07:34:19</LastLoginTime>
+    <PivotName>billpardi</PivotName>
+  </User>
+  <User>
+    <UserName>http://bpardi.myopenid.com/</UserName>
+    <Password>sl57iDXa+wVQaXV2Jgl+xwA3GVhkwLyZ1CmJjbnRYCA=</Password>
+    <Email></Email>
+    <LastLoginTime>2011-12-23 07:59:02</LastLoginTime>
+    <PivotName>home</PivotName>
+  </User>
+</Users>

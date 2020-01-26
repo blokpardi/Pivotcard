@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+    <title>Pivotcard</title>
+    
+	  <link rel="stylesheet" href="stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/Pivotcard.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/jquery.mobile.structure-1.0.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/pivotstylemobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+     
+      <script type="text/javascript" src="scripts/phonegap-1.3.0.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.mobile-1.0.min.js"></script>
+      <!--<script type="text/javascript" src="scripts/jquery.validate.min.js"></script>-->
+      <!--<script type="text/javascript" src="scripts/pivotscripts.js"></script>-->
+
+       <script type="text/javascript" language="javascript">
+           baseUrl = "http://localhost:59671/";
+           $(document).ready(function () {
+              
+           });
+            function init()
+			{
+				document.addEventListener("deviceready",onDeviceReady,false);
+			}
+
+			function checkConnection() {
+			    var networkState = navigator.network.connection.type;
+			    var states = {}; 
+                states[Connection.UNKNOWN] = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI] = 'WiFi connection';
+                states[Connection.CELL_2G] = 'Cell 2G connection';
+                states[Connection.CELL_3G] = 'Cell 3G connection';
+                states[Connection.CELL_4G] = 'Cell 4G connection';
+                states[Connection.NONE] = 'No network connection';
+                // navigator.notification.alert('Connection type: ' + networkState);
+                return networkState;
+            }
+
+			function pageNav(page) {
+
+			    var pgPath = window.location.protocol + "app\\www/" + page;
+			    //navigator.notification.alert(page);
+			    $('#content').load(pgPath);
+			 
+			}
+
+			function onDeviceReady(e) {
+			    pushStateEnabled = "false";
+			    $.support.cors = true;
+			    $.mobile.allowCrossDomainPages = true;
+
+//			    //navigator.notification.alert($.mobile.path.parseUrl());
+
+////			    navigator.notification.activityStart();
+
+////			    if (checkConnection() != 'none') {
+
+//			    //var pgPath = baseUrl + "mobile/jrtest.html";  //
+//			    navigator.taintEnabled = true;
+//			        var pgPath = window.location.protocol + "app\\www/jrtest.html";
+//			        window.location.href = pgPath;
+////			    }
+////			    else {
+////			        $("#mainmessage").html("It appears you have no network connection. Pivotcard requires internet access.")
+////                }
+//			    //navigator.notification.alert(window.location.href);
+//			    //$('#content').load('x-wmapp1:app\\www/home.html');
+			    $.ajax({
+			        type: "GET",
+			        url: 'http://pardiserv2/DataService.svc/checkUser/bill@pardi.net',
+			        contentType: "application/json",
+			        dataType: "jsonp",
+			        success: function (T) {
+			            $("#mainBody").html(T.toString());
+			        }
+			    });
+			}
+    </script>
+  </head>
+<body style="margin:0;" onload="init();" >
+  
+		<!--<img style="width:100%; height:100%;" src="images/SplashScreenImage.jpg"/>-->
+	<div id="mainBody"></div>
+      
+   		<div style="width:100%;float:left; text-align:center; height:100%"><img style="width:100%; height:100%;" src="images/SplashScreenImage.jpg"/></div>
+  
+</body>
+</html>

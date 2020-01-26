@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Upgrade Your Business Card - Mobile</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js" type="text/javascript" language="javascript"></script>
+<!--<script src="http://ajax.aspnetcdn.com/ajax/jquery.mobile/1.0/jquery.mobile-1.0.min.js" type="text/javascript" language="javascript"></script>-->
+<script type="text/javascript" src="scripts/mobilecontentfader.js"></script>
+<link rel="stylesheet" type="text/css" href="stylesheets/mobilecontentfader.css" />
+<style type="text/css">
+	#mainDiv
+	{
+	width: 320px;
+	text-align: left;
+	min-height: 600px;
+	margin: auto;
+	overflow:hidden;
+	display:none;
+	}
+	
+	.contentBox
+	{
+		width:290px;
+		float:left; 
+		text-align:left; 
+		margin:10px 15px 10px 15px; 
+		color:#414141; 
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+		font-size:14pt;
+		background-image:url('bg_trans.png');
+		background-repeat:repeat;
+	}
+
+</style>
+<script type="text/javascript" language="javascript">
+    featuredcontentglider.init({
+        gliderid: "gliderbox", //ID of main glider container
+        contentclass: "glidecontent", //Shared CSS class name of each glider content
+        togglerid: "p-select", //ID of toggler container
+        remotecontent: "", //Get gliding contents from external file on server? "filename" or "" to disable
+        selected: 0, //Default selected content index (0=1st)
+        persiststate: false, //Remember last content shown within browser session (true/false)?
+        speed: 1000, //Glide animation duration (in milliseconds)
+        direction: "rightleft", //set direction of glide: "updown", "downup", "leftright", or "rightleft"
+        autorotate: true, //Auto rotate contents (true/false)?
+        autorotateconfig: [5000, 2] //if auto rotate enabled, set [milliseconds_btw_rotations, cycles_before_stopping]
+    })
+
+    function testUA() {
+        if (screen.width < 500 ||
+		 	navigator.userAgent.match(/Android/i) ||
+		 	navigator.userAgent.match(/webOS/i) ||
+		 	navigator.userAgent.match(/iPhone/i) ||
+		 	navigator.userAgent.match(/IEMobile/i) ||
+		 	navigator.userAgent.match(/iPod/i)) {
+            document.getElementById('mainDiv').style.display = 'block';
+        }
+        else {
+            top.location.href = "http://pivotcard.com/upgrade.aspx";
+        }
+    }
+
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-27994758-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</head>
+
+<body onload="testUA()" style="margin:0">
+<div id="mainDiv">
+    <div style="width:100%;float:left; text-align:center; margin:10px auto 5px auto;"><img alt="logo" style="margin-right:7px" src="images/pc_logo_136x49.jpg"  /></div>
+    <div class="contentBox">
+	
+	    <div style="width:100%; text-align:center; margin:auto auto 5px auto;">
+		    <span style="font-size:16pt"><b>Upgrade Your Business Card</b></span>
+	    </div>
+    </div>
+    
+    <div id="gliderbox" class="glidecontentwrapper" style="text-align:center; width:100%;">
+
+    <div class="glidecontent" >
+        <img alt="" src="images/mobile_p1.jpg" />
+    </div>
+
+    <div class="glidecontent" >
+        <img alt="" src="images/mobile_p2.jpg" />
+    </div>
+    
+    <div class="glidecontent" >
+     <img alt="" src="images/mobile_p3.jpg" />
+    </div>
+     
+    <div id="p-select" class="glidecontenttoggler">
+    <a href="#" class="toc">&nbsp;</a> <a href="#" class="toc">&nbsp;</a> <a href="#" class="toc">&nbsp;</a>
+    </div>
+    </div>
+</div>
+
+</body>
+
+</html>

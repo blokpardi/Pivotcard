@@ -1,0 +1,30 @@
+﻿<profile>
+  <displayName>Bill</displayName>
+  <identifier>http://bpardi.myopenid.com/</identifier>
+  - <name>
+    <givenName>Bill</givenName>
+    <middleName>Pardi</middleName>
+    <formatted>Bill Pardi</formatted>
+  </name>
+  <photo>http://www.myopenid.com/image?id=202426</photo>
+  <preferredUsername>bpardi</preferredUsername>
+  <providerName>MyOpenID</providerName>
+  <url>http://bpardi.myopenid.com/</url>
+</profile>
+
+
+<profile>
+  <displayName>ryanidrap</displayName>
+  <email>ryanidrap@gmail.com</email>
+  <identifier>https://www.google.com/profiles/103196419386017633518</identifier>
+  - <name>
+    <givenName>Ryan</givenName>
+    <familyName>Idrap</familyName>
+    <formatted>Ryan Idrap</formatted>
+  </name>
+  <preferredUsername>ryanidrap</preferredUsername>
+  <providerName>Google</providerName>
+  <url>https://www.google.com/profiles/103196419386017633518</url>
+  <verifiedEmail>ryanidrap@gmail.com</verifiedEmail>
+  <googleUserId>103196419386017633518</googleUserId>
+</profile>

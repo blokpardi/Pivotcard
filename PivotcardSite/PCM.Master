@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PCM.master.cs" Inherits="PivotcardSite.PCM" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta name="application-name" content="Pivotcard"/>
+    <meta name="msapplication-tooltip" content="Start the page in Site Mode"/>
+    <meta name="msapplication-starturl" content="http://pivotcard.com"/>
+    <meta name="msapplication-window" content="width=1125;height=800"/>
+    <meta name="msapplication-navbutton-color" content="#F5BDA3"/>
+
+    <meta name="msapplication-task" content="name=My Pivots;action-uri=http://pivotcard.com/my-pivots.aspx;icon-uri=http://pivotcard.com/favicon.ico"/>
+    <meta name="msapplication-task" content="name=Pivotcard on Facebok;action-uri=http://www.facebook.com/pivotcard;icon-uri=http://www.facebook.com/favicon.ico"/>
+    <meta name="msapplication-task" content="name=Pivotcard on Twitter;action-uri=http://www.twitter.com/pivotcard;icon-uri=http://www.twitter.com/favicon.ico"/>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js" type="text/javascript" language="javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js" type="text/javascript" language="javascript"></script>
+    <%--<script src="scripts/jquery-1.7.1.min.js" type="text/javascript" language="javascript"></script>--%>
+    <script type="text/javascript" src="scripts/headerfooter.js"></script>
+    <script type="text/javascript" src="scripts/pivotscripts.js"></script>
+    <script type="text/javascript" src="scripts/jquery-ui-1.8.16.custom.min.js"></script>
+    <link href="stylesheets/jquery-ui-1.8.16.custom.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="stylesheets/pivotstylemain.css" type="text/css" />
+    <title></title>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-27994758-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</head>
+<body>
+    <form id="masterForm" runat="server">
+    <div id="fb-root"></div>
+    <%--<script>    
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=208010555941571";
+        fjs.parentNode.insertBefore(js, fjs);
+    } (document, 'script', 'facebook-jssdk'));
+    </script>--%>
+    <asp:ScriptManager ID="ScriptManager" runat="server" />
+    <div id="header">
+        <div id="acctButton">Sign in</div>
+        <div id="navBar"><div id="navLogo"><img src="images/logo_color.png" alt="Pivotcard logo"/></div><div id="navButtons"><a href="#" id="startlink" class="hlinkTopNav">Get started</a><a href="pivotcard-social.aspx" class="hlinkTopNav">Social</a><a href="pivotcard-support.aspx" class="hlinkTopNav">Support</a><a href="gear.aspx" class="hlinkTopNav">Gear up</a></div></div>
+    </div>
+    <div id="mainbody">
+        <asp:ContentPlaceHolder ID="main" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div id="footer">
+        <div id="footerBar"><div style="float:left;">© Copyright 2012 Pivotcard, LLC</div><a href="pivotcard-about.aspx" class="hlinkBotNav">About</a><a href="terms.aspx" class="hlinkBotNav">Terms</a><a href="privacy.aspx" class="hlinkBotNav">Privacy</a><div id="fblike" style="float:left; margin-left:20px">
+        <!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style ">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_10"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4efcac9e0fa082b4"></script>
+<!-- AddThis Button END -->
+        </div></div>
+    </div>
+
+    <!--Alert box-->
+    <div id="alertbox" style="display:none" title="Message">
+	    <p><span class="ui-icon ui-icon-info" style="float:left; margin:5px 7px 20px 0;"></span><span id="alertboxtext"></span></p>
+    </div>
+    </form>
+</body>
+</html>

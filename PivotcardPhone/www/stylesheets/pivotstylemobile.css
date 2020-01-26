@@ -1,0 +1,504 @@
+﻿@font-face {
+  font-family: 'Segoe UI';
+  src: url('stylesheets/fonts/segoeui.eot');
+  src: local('Segoe UI'), local('Segoe UI'), url('stylesheets/fonts/segoeui.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Light';
+  src: url('stylesheets/fonts/segoeuil.eot');
+  src: local('Segoe UI Light'), local('Segoe UI Light'), url('stylesheets/fonts/segoeuil.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Semibold';
+  src: url('stylesheets/fonts/seguisb.eot');
+  src: local('Segoe UI Semibold'), local('Segoe UI Semibold'), url('stylesheets/fonts/seguisb.ttf') format('truetype');
+}
+body
+{
+	background-color:#ffffff !important;
+	margin:0;
+	overflow:hidden;
+}
+#footer
+{
+    width:320px; 
+    height:26px;
+    padding-top:9px; 
+    color:#FFFFFF; 
+    background-color:#3F3F3F;
+    float:left;
+}
+
+#footercontent
+{
+    color:#ffffff;
+    font-size:10pt;
+    margin-left:15px;
+}
+#navLogo
+{
+	margin:6px auto auto 8px;
+	float:left;
+}
+.errorText
+{
+	float:right;
+	font-size:9pt;
+	color:Red;
+	visibility:visible;
+	text-align:left;
+	margin-top:0px;
+	margin-right:35px;
+	min-width:150px;
+}
+
+.blueNumber
+{
+	width:30px;
+	height:30px;
+	text-align:center;
+	vertical-align:middle;
+	background-color:#3C85CC;
+	color:#ffffff;
+	font-size:14pt;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	float:left;
+}
+
+.blueButton
+{
+	height:42px; 
+	font-size:14pt; 
+	background-color:#3C85CC; 
+	color:#FFFFFF;  
+	border:0;
+	width:180px
+}
+.titletext
+{
+    max-width:280px;
+}
+#loginBox
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	float:left;
+	color:#000000;
+	margin:5px;
+	width:300px;
+}
+
+#loginBox .label
+{
+	margin-right:10px;
+	clear:right;
+}
+
+#loginBox #pNameEdit, #uNameEdit, #pwEdit
+{ 
+	text-align:left;
+	float:left;
+	margin-left:6px;
+	height:58px;
+}
+
+#loginBox #pNameInput, #uNameInput, #pwInput
+{
+	margin-right:5px;
+}
+
+.persist
+{
+	font-size:10pt; 
+	color:#666666; 
+	float:left; 
+	width:auto; 
+	vertical-align:middle; 
+}
+
+#tipmask
+{
+    display:none;
+    position:absolute;
+    height:100%;
+    width:100%;
+    display:none;
+    margin: 0 auto;
+    text-align:center;
+    z-index:9000;
+    background-color:#000;
+    opacity: 0.5;
+}
+#tiptext
+{
+	display:none;
+	position:absolute;
+	margin: 0 auto;
+    border: 1px solid #3C85CC;
+	background-color: #FFFFCC;
+	width:auto;
+	color:#000000;
+	max-width:210px;
+	padding: 7px;
+	z-index:9100;
+	overflow:hidden;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.helpbubble
+{
+	width: 30px;
+	height: 30px;
+	background: #3399FF;
+	color: #ffffff;
+	font-size:12pt;
+	text-align: center;
+	margin-top:-3px;
+	line-height: 160%;
+	font-weight: bold;
+	vertical-align: middle;
+	-moz-border-radius: 15px;
+	-webkit-border-radius: 15px;
+	border-radius: 15px;
+	border: 1px solid #fffff;
+}
+
+/********************************
+		My Pivots Page
+********************************/
+#noCardContainer
+{
+	margin:10px auto 5px 10px;
+	width:300px;
+	float:left;
+	text-align:center;
+	font-size:14pt;
+	display:none;
+}
+
+#noCardContainer a
+{
+    color:#000000;
+}
+#myTitleContainer
+{
+	margin:0px auto 5px 10px;
+	width:300px;
+	float:left;
+}
+.myTitleName
+{
+	margin-top:8px;
+	font-size: 12pt;
+	float:left;
+	color: #838C93;
+}
+
+.myTitleLink
+{
+	margin-top:10px;
+	font-size:10pt;
+	color:#838C93;
+	float:left;
+}
+
+#myTitleAdd
+{
+	margin-top:10px;
+	font-size:12pt;
+	font-weight:bold;
+	cursor:pointer;
+	color:#838C93;
+	float:left;
+	width:100%;
+	text-decoration:none;
+}
+
+#myTitleAdd:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+#myCardContainer
+{
+	width:300px;
+	height:auto;
+	/*overflow:scroll;*/
+	float:left;
+	margin-left:10px;
+	margin-bottom:5px;
+	margin-top:15px;
+}
+.myCardBox
+{
+	margin:0px 15px 30px 20px;
+	float:left;
+	border:1px solid #3F3F3F;
+	width:254.75px;
+	height:151.71px;
+	background-color:#F3F3F3;
+	box-shadow:3px 3px 5px 1px lightgrey;
+	overflow:hidden;
+	color:#000000;
+
+}
+
+.animbox
+{
+	margin:0px 15px 30px 15px;
+	float:left;
+	border:1px solid #3F3F3F;
+	width:254.75px;
+	height:151.71px;
+	position:absolute;
+	z-index:9950;
+	display:none;
+}
+.cardContent
+{
+	margin:15px 15px 15px 12px;
+	max-width:225px;
+	float:left;
+	height:90px;
+	
+}
+.cardTitle
+{
+	width:225px;
+	margin:auto;
+	text-align:center;
+	margin-bottom:10px;
+	font-size:18pt;
+	float:left;
+}
+.cardLink
+{
+	margin:auto;
+	text-align:center;
+	font-size:11pt;
+	max-height:60px;
+	max-width:225px;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	float:left;
+}
+.cardButtons
+{
+	margin:3px 15px 15px 0px;
+	width:255px;
+	height:29px;
+	background-color:#ED885A;
+	float:left;
+	color:#838C93;
+	font-size:11pt;
+}
+.cardButtons div, 
+.cardButtons a
+{
+	margin-left:55px;
+	margin-top:4px;
+	color:#ffffff;
+	float:left;
+	cursor:pointer;
+	text-decoration:none;
+	
+}
+
+.cardButtons div:before, 
+.cardButtons a:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+.cardButtons input
+{
+	margin-left:20px;
+	margin-top:3px;
+	float:left;
+}
+.cardButtons label
+{
+	margin-left:5px;
+	float:left;
+}
+
+#mask {
+  position:absolute;
+  left:0;
+  top:0;
+  z-index:5000;
+  background-color:#000;
+  display:none;
+  opacity: 0.5;
+  
+}
+  
+#editDialog
+{
+	position:absolute;
+	left:0;
+	top:0;
+	max-width:300px;
+	min-height:378px;
+	border:1px solid #000000;
+	background-color:#ffffff;
+	display:none;
+	z-index:8100;
+}
+#typeButtons
+{
+	width:100%;
+	font-size:14pt;
+	margin-bottom:30px;
+}
+
+.typeButton
+{
+	width:150px;
+	height:30px;
+	text-align:center;
+	margin:auto;
+	float:left;
+	color:#000000;
+	background-color:#ffffff;
+	cursor:pointer;
+	padding-top:5px;
+}
+
+.typeButton.inactive
+{
+	color:#d6d6d6;
+	background-color:#838C93;
+}
+
+.typePage
+{
+	width:100%;
+	height:260px;
+	text-align:center;
+	margin:auto;
+	float:left;
+	color:#000000;
+	background-color:#ffffff;
+	display:block;
+}
+
+.editButtons
+{
+	margin:0 auto;
+	width:100%;
+	float:left;
+	text-align:center;
+	font-size:12pt;
+	font-weight:bold;
+	color:#000000;
+	cursor:pointer;
+}
+
+.editButtons .save, .cancel
+{
+	float:left;
+	margin-left:65px;
+	background-color: transparent;
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+}
+
+.editButtons div:before
+{
+	content: "\25AA";
+	margin-right: 2px;
+}
+
+.editButtons .persist:before
+{
+	content: "\0020";
+}
+
+.shortcutInput
+{
+	float:left; margin-bottom:20px; width:100%; font-size:10pt;
+}
+
+.shortcutInput .labelText
+{
+	float:left;
+	margin:0px 10px 5px 10px;
+}
+
+.shortcutInput input
+{
+	float:left;
+}
+.shortcutInput .exampleText
+{
+	float:left;
+	margin-left:10px;
+	font-size:10pt;
+}
+.shortcutInput .errorText
+{
+	float:left;
+	font-size:9pt;
+	color:Red;
+	visibility:visible;
+	width:200px;
+	text-align:left;
+	margin-left:20px;
+	margin-top:-5px;
+}
+
+.errorText
+{
+	float:left;
+	margin-left:10px;
+	font-size:10pt;
+	color:Red;
+	visibility:visible;
+}
+#nscontain
+{
+	background-color:#3C85CC;
+	width:100%;
+	float:left;
+	text-align:center;
+	margin:auto;
+	background-color:#3C85CC;
+	display:none;
+}
+#nextstep
+{
+	width:250px;
+	height:30px;
+	margin:auto;
+	cursor:pointer;
+	
+}
+.basicblack
+{
+	font-size:12pt;
+	float:left;
+	text-align:center;
+	padding-top:10px;
+	height:30px;
+	width:243px;
+}
+.whitebluefield
+{
+	font-size:12pt;
+	float:left;
+	width:auto;
+	height:auto;
+	text-align:center;
+	padding-top:5px;
+	color:#ffffff;
+}
+#contentContainer
+{
+	margin:20px 0px 20px 25px;
+	float:left;
+}

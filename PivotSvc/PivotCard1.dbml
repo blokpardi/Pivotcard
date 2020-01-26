@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DB_20674_pivot1" Class="PivotCard1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=s06.winhost.com;Initial Catalog=DB_20674_pivot1;Persist Security Info=True;User ID=DB_20674_pivot1_user" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DB_20674_pivot1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblPivots" Member="Pivots">
+    <Type Name="Pivot" Id="ID1">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Guid" CanBeNull="false" />
+      <Column Name="PivotCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="PivotContent" Storage="_PivotURL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDefault" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDeleted" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Users_Pivot" Member="Users" ThisKey="UserID" OtherKey="UserId" Type="Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.aspnet_Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="ApplicationId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Guid" DbType="UniqueIdentifier NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="LoweredUserName" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="MobileAlias" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="IsAnonymous" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="LastActivityDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="PivotName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastLoginTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Users_Pivot" Member="Pivots" ThisKey="UserId" OtherKey="UserID" Type="Pivot" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetPivotRedir" Method="GetPivotRedir">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PivotCode" Parameter="pivotCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsDefault" Parameter="isDefault" Type="System.Boolean" DbType="Bit" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.GetCheckUser" Method="GetCheckUser">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="GetCheckUserResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCheckPivot" Method="GetCheckPivot">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="GetCheckPivotResult">
+      <Column Name="PivotName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetPivotName" Method="GetPivotName">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="GetPivotNameResult">
+      <Column Name="PivotName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SetLoginUser" Method="SetLoginUser">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="SetLoginUserResult">
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.SetUpdateUser" Method="SetUpdateUser">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(256)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(256)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.SetSavePivot" Method="SetSavePivot">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PivotCode" Parameter="pivotCode" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PivotId" Parameter="pivotId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PivotContent" Parameter="pivotContent" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="PivotType" Parameter="pivotType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PivotDefault" Parameter="pivotDefault" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="SetSavePivotResult">
+      <Column Name="PivotCode" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PivotContent" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsDefault" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="PivotName" Type="System.String" DbType="NVarChar(256)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetPivots" Method="GetPivots">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.GetPivot" Method="GetPivot">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PivotID" Parameter="pivotID" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+  <Function Name="dbo.SetDeletePivot" Method="SetDeletePivot">
+    <Parameter Name="PivotName" Parameter="pivotName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PivotID" Parameter="pivotID" Type="System.Int32" DbType="Int" />
+    <ElementType IdRef="ID1" />
+  </Function>
+</Database>

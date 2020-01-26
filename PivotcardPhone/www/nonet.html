@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/> 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    
+    <title>Pivotcard</title>
+    
+	  <link rel="stylesheet" href="stylesheets/master.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/Pivotcard.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/jquery.mobile.structure-1.0.min.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+      <link rel="stylesheet" href="stylesheets/pivotstylemobile.css" type="text/css" media="screen" title="no title" charset="utf-8"/>
+     
+      <script type="text/javascript" src="scripts/phonegap-1.3.0.js"></script>
+      <script type="text/javascript" src="scripts/jquery-1.7.1.min.js"></script>
+      <script type="text/javascript" src="scripts/jquery.mobile-1.0.min.js"></script>
+
+       <script type="text/javascript" language="javascript">
+           $(document).ready(function () {
+              
+           });
+            function init()
+			{
+				document.addEventListener("deviceready",onDeviceReady,false);
+			}
+
+			function checkConnection() {
+			    var networkState = navigator.network.connection.type;
+			    var states = {}; 
+                states[Connection.UNKNOWN] = 'Unknown connection';
+                states[Connection.ETHERNET] = 'Ethernet connection';
+                states[Connection.WIFI] = 'WiFi connection';
+                states[Connection.CELL_2G] = 'Cell 2G connection';
+                states[Connection.CELL_3G] = 'Cell 3G connection';
+                states[Connection.CELL_4G] = 'Cell 4G connection';
+                states[Connection.NONE] = 'No network connection';
+                return networkState;
+            }
+
+			function onDeviceReady(e) {
+			    pushStateEnabled = "false";
+			    $.support.cors = true;
+			    $.mobile.allowCrossDomainPages = true;
+			    navigator.notification.activityStop();
+			}
+    </script>
+  </head>
+<body style="margin:0;" onload="init();" >
+  
+		<!--<img style="width:100%; height:100%;" src="images/SplashScreenImage.jpg"/>-->
+	
+      
+   		<div style="width:100%;float:left; text-align:center; height:100%"><img style="width:100%; height:100%;" src="images/SplashScreenImage.jpg"/><div style="position:absolute; z-index:20; width:250px; text-align:justify; left:30px; top:250px">It appears you do not have an active internet connection. Please check your Cell or WiFi connection and try again.</div></div>
+  
+</body>
+</html>

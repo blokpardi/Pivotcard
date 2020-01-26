@@ -1,0 +1,159 @@
+﻿@font-face {
+  font-family: 'Segoe UI';
+  src: url('fonts/segoeui.eot');
+  src: local('Segoe UI'), local('Segoe UI'), url('/fonts/segoeui.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Light';
+  src: url('fonts/segoeuil.eot');
+  src: local('Segoe UI Light'), local('Segoe UI Light'), url('/fonts/segoeuil.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Segoe UI Semibold';
+  src: url('/fonts/seguisb.eot');
+  src: local('Segoe UI Semibold'), local('Segoe UI Semibold'), url('fonts/seguisb.ttf') format('truetype');
+}
+body
+{
+	margin: auto;
+	height:100%;
+	cursor:default;
+	max-width: 1000px;
+	min-width: 1000px;
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+}
+#janrainEngage
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	text-align:center;
+	width:890px;
+	float:left;
+}
+#janrainEngageEmbed
+{
+	width:392px;
+	margin:auto;	
+}
+#janrainEngageEmbed div
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	
+}
+#header, #footer, #mainbody
+{
+	margin:auto;
+	width:890px;
+}
+#footer
+{
+	color:#838C93;
+	font-size:10pt;
+}
+#acctButton
+{
+	font-size:12pt;
+	color:#ffffff;
+	background-color:#838C93;
+	width:171px;
+	height:32px;
+	text-align:center;
+	padding-top:5px;
+	float:right;
+	cursor:pointer;
+}
+#acctButton:Hover
+{
+	color:#C9CCCE;
+}
+#navBar, #footerBar
+{
+	width:100%;
+	margin-top:10px;
+	margin-bottom:10px;
+	float:left;
+}
+#footerBar
+{
+	margin-top:25px;
+}
+#navLogo
+{
+	float: left;
+	width:144px;
+}
+#navButtons
+{
+	float:right;
+	height:53px;
+	margin-top:20px;
+	vertical-align:middle;
+	width:auto;
+}
+.hlinkTopNav, .hlinkBotNav
+{
+	color:#838C93;
+	text-decoration:none;
+	margin-left:20px;
+}
+.hlinkTopNav:Hover, .hlinkBotNav:Hover
+{
+	color:#000000;
+}
+#herobox
+{
+	height:510px;
+	width:890px;
+	float:left;
+	border:1px solid #000000;	
+}
+.titletext
+{
+	font-family: 'Segoe UI', 'Century Gothic' , Verdana, Arial, Sans-Serif;
+	font-size:24pt;
+	color:#000000;
+	text-align:left;
+	float:left;
+}
+#herocta
+{
+	float:left;
+	width:445px;
+	height:507px;
+	vertical-align:middle;
+}
+.herotext
+{
+	margin-left:50px;
+	margin-top:150px;
+	width:380px;
+	height:auto;
+	float:inherit;
+}
+#heroimage
+{
+	float:right;
+}
+#learnbutton
+{
+	border-style: none;
+	color: #FFFFFF;
+	font-size: 18pt;
+	background-color: #ED885A;
+	width: 175px;
+	height: 34px;
+	float: left;
+	text-align: center;
+	margin-left:125px;
+	margin-top:50px;
+	cursor:pointer;
+}
+.greyfield
+{
+	border-style: none;
+	color: #FFFFFF;
+	font-size: 22pt;
+	background-color: #9DA6AE;
+	float: left;
+	text-align: center;
+	vertical-align: middle;
+}
